@@ -1,9 +1,7 @@
 const express = require('express');
-const app = express();
 const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
-const port = 3010;
 
 const app = express();
 
@@ -59,8 +57,8 @@ app.get('/list', (req, res) => {
 
 app.use(cors());
 
-app.listen(port, () => {
-  require('dns').lookup(require('os').host  name(), function (err, add, fam) {
+app.listen(4000, () => {
+  require('dns').lookup(require('os').hostname(), function (err, add, fam) {
     console.log('Listening on ' + add + ':4000');
   });
 });
